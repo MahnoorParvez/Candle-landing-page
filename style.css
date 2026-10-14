@@ -1,0 +1,101 @@
+/* css variable for reusable colors */
+:root {
+  --main-color: #2f4a3a;
+  --accent-color: #e8a93c;
+  --light-bg: #f3ede2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* header - uses flexbox */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+}
+
+/* hero section - uses flexbox */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-bg);
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 500px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: var(--accent-color);
+  color: #222;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* features section */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+
+/* feature cards - uses css grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--light-bg);
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.card h3 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+/* media query for smaller screens */
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+}
